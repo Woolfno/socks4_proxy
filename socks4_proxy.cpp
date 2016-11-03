@@ -1,4 +1,4 @@
-#include "socks4_proxy.h"
+﻿#include "socks4_proxy.h"
 
 #include <iostream>
 #include <string>

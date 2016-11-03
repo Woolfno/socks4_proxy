@@ -1,4 +1,4 @@
-#ifndef __SOCKS4_PROXY__
+п»ї#ifndef __SOCKS4_PROXY__
 #define __SOCKS4_PROXY__
 
 #ifdef WIN32
@@ -59,8 +59,8 @@ namespace socks4_proxy
 	class session :public boost::enable_shared_from_this<session>,boost::noncopyable
 	{
 	private:
-		ip::tcp::socket client_socket_;		//сокет клиета
-		ip::tcp::socket server_socket_;		//сокет внешнего сервера
+		ip::tcp::socket client_socket_;		//СЃРѕРєРµС‚ РєР»РёРµС‚Р°
+		ip::tcp::socket server_socket_;		//СЃРѕРєРµС‚ РІРЅРµС€РЅРµРіРѕ СЃРµСЂРІРµСЂР°
 		bool complete;
 
 		io_service & service;
@@ -68,8 +68,8 @@ namespace socks4_proxy
 		request socks_request;
 		response socks_response;
 				
-		std::queue<msg_ptr> client_msgs;	//от клиента серверу
-		std::queue<msg_ptr> server_msgs;	//от сервера клиенту		
+		std::queue<msg_ptr> client_msgs;	//РѕС‚ РєР»РёРµРЅС‚Р° СЃРµСЂРІРµСЂСѓ
+		std::queue<msg_ptr> server_msgs;	//РѕС‚ СЃРµСЂРІРµСЂР° РєР»РёРµРЅС‚Сѓ		
 
 		void wait_request_on_connection();
 		void do_connect(const boost::system::error_code & err, size_t bytes);
